@@ -79,7 +79,7 @@ function createStudentCard() {
     const fullname = fullnameInput.value;
     const email = emailInput.value;
     const phone = phoneInput.value;
-    const font
+    const font = fontSelect.value;
 
     // Uppdatera studentkortet
 
