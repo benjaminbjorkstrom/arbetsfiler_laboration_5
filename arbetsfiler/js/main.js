@@ -60,8 +60,14 @@ function validateForm() {
  */
 function displayErrors() {
     // Rensa tidigare felmeddelanden
+    errorList.innerHTML = "";
 
     // Skriv ut aktuella felmeddelanden till DOM
+    errors.forEach(function(error) {
+        const li = document.createElement("li");
+        li.textContent = error;
+        errorList.appendChild(li);
+    }); 
 }
 
 
@@ -70,6 +76,10 @@ function displayErrors() {
  */
 function createStudentCard() {
     // Hämta information från formuläret
+    const fullname = fullnameInput.value;
+    const email = emailInput.value;
+    const phone = phoneInput.value;
+    const font
 
     // Uppdatera studentkortet
 
@@ -132,6 +142,13 @@ function deleteHistory() {
 // När formuläret skickas:
 // - validera inmatningen
 // - skapa studentkort om valideringen lyckas
+form.addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    if (validateForm()) {
+        createStudentCard();
+    }
+});
 
 
 // När användaren klickar på "Rensa"
