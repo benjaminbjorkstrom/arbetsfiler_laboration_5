@@ -91,6 +91,14 @@ function createStudentCard() {
     previewPhone.style.fontFamily = font;
 
     // Lägg till studentkortet i historiken
+    const student = {
+        fullname: fullname,
+        email: email,
+        phone: phone,
+        font: font
+    };
+
+    history.unshift(student);
 
     // Spara och uppdatera historiken
 }
