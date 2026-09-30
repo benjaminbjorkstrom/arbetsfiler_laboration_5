@@ -99,6 +99,7 @@ function createStudentCard() {
     };
 
     history.unshift(student);
+    saveHistory();
 
     // Spara och uppdatera historiken
 }
