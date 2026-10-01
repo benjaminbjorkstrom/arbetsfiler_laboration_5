@@ -143,15 +143,15 @@ function renderHistory() {
 
         const name = document.createElement("div");
         name.classList.add("card-info");
-        name.textContent = student.fullname;
+        name.textContent = `Namn: ${student.fullname}`;
 
         const email = document.createElement("div");
         email.classList.add("card-info");
-        email.textContent = student.email;
+        email.textContent = `E-post: ${student.email}`;
 
         const phone = document.createElement("div");
         phone.classList.add("card-info");
-        phone.textContent = student.phone;
+        phone.textContent = `Telefonnummer: ${student.phone}`;
 
         card.appendChild(name);
         card.appendChild(email);
